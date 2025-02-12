@@ -1,8 +1,9 @@
+import getData from "./getData";
+
 const cart = () => {
   const cartBtn = document.getElementById("cart");
   const cartModal = document.querySelector(".cart");
   const cartCloseBtn = cartModal.querySelector(".cart-close");
-  console.log(cartCloseBtn);
 
   const openCart = () => {
     cartModal.style.display = "flex";
@@ -15,6 +16,8 @@ const cart = () => {
   cartBtn.addEventListener("click", openCart);
 
   cartCloseBtn.addEventListener("click", closeCart);
+
+  getData("getData2");
 };
 
 export default cart;
